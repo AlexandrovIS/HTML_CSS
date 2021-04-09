@@ -319,6 +319,7 @@ footer{
       color: #222224;
       span{
       font-style: italic;
+      font-weight: 400;
       }         
       }
     }
@@ -335,6 +336,37 @@ footer{
           font-size: 18px;
           font-weight: 400;
           line-height: 40px;
+        }
+        .footer__subc_form{
+          display: flex;
+          min-height: 50px;
+          margin-top: 32px;
+          
+          *{
+          padding: 0 20px; 
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 17px;
+          }
+          input{
+            background: #E1E1E1;
+            border-radius: 50px 0px 0px 50px;
+          }
+          button{
+            background: $font-color-pink;
+            color: #FFFFFF;
+            border-radius: 0px 50px 50px 0px;
+            transition: background-color .3s ease;
+          }
+          button:hover{
+            background: #E05C6E;
+            transition: background-color .3 ease;
+
+          }
+          
+          
+
+
         }
       }
   }

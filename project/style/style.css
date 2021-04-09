@@ -419,6 +419,7 @@ footer .footer__top_list .top__list_item-left p {
 
 footer .footer__top_list .top__list_item-left p span {
   font-style: italic;
+  font-weight: 400;
 }
 
 footer .footer__top_list .top__list_item-right {
@@ -439,6 +440,40 @@ footer .footer__top_list .top__list_item-right .item__right-text {
   font-size: 18px;
   font-weight: 400;
   line-height: 40px;
+}
+
+footer .footer__top_list .top__list_item-right .footer__subc_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 50px;
+  margin-top: 32px;
+}
+
+footer .footer__top_list .top__list_item-right .footer__subc_form * {
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+footer .footer__top_list .top__list_item-right .footer__subc_form input {
+  background: #E1E1E1;
+  border-radius: 50px 0px 0px 50px;
+}
+
+footer .footer__top_list .top__list_item-right .footer__subc_form button {
+  background: #F16D7F;
+  color: #FFFFFF;
+  border-radius: 0px 50px 50px 0px;
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+}
+
+footer .footer__top_list .top__list_item-right .footer__subc_form button:hover {
+  background: #E05C6E;
+  -webkit-transition: background-color .3 ease;
+  transition: background-color .3 ease;
 }
 
 footer .footer__bottom {
