@@ -377,7 +377,9 @@
 }
 
 footer .footer__top {
-  background: url(../img/footer-top-img.jpeg) no-repeat center;
+  background-image: url(../img/footer-top-img.jpeg);
+  background-position: center;
+  background-size: cover;
 }
 
 footer .footer__top_list {
@@ -524,5 +526,13 @@ footer .footer__bottom .footer__bottom_contain .footer__bottom_list li {
 
 footer .footer__bottom .footer__bottom_contain .footer__bottom_list .bottom_list-insta {
   background: #F16D7F;
+}
+
+.bg__img {
+  background-image: url(../img/footer-top-img.jpeg);
+  height: 500px;
+  border: 1px solid #000;
+  background-position: center;
+  background-size: cover;
 }
 /*# sourceMappingURL=style.css.map */

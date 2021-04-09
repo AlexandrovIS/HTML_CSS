@@ -294,7 +294,10 @@ font-weight: 700;
 
 footer{
   .footer__top{
-    background: url(../img/footer-top-img.jpeg) no-repeat center;
+    background-image: url(../img/footer-top-img.jpeg);
+    background-position: center;
+    background-size: cover;
+    // background: url(../img/footer-top-img.jpeg) no-repeat center;
   }
   .footer__top_list{
     display: flex;
@@ -361,12 +364,7 @@ footer{
           button:hover{
             background: #E05C6E;
             transition: background-color .3 ease;
-
           }
-          
-          
-
-
         }
       }
   }
@@ -401,6 +399,5 @@ footer{
       }
     }
   }
-  
 }
 
