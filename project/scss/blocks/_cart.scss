@@ -1,0 +1,190 @@
+.cart__wrapper{
+  display: flex;
+  margin-top: 96px;
+  margin-bottom: 128px;
+
+  .goods__box{
+    display: flex;
+    flex-direction: column;
+    
+
+    .box__list{
+      
+      .box__item{
+        display: flex;
+        position: relative;
+        box-shadow: 10px 10px 8px 0px rgba(34, 60, 80, 0.2);
+        margin-bottom: 40px;
+      }
+      .box__item-list{
+        min-width: 390px;
+        display: flex;
+        flex-direction: column;
+        padding: 22px 31px;  
+
+        &-title{
+          max-width: 262px;
+          @include font(24,29,400);
+          text-transform:uppercase;
+          margin-bottom: 42px;
+        }
+
+        p{
+          @include font(22,26,400);
+          margin-bottom: 6px;
+          color: #575757;
+        }
+
+        &-price{
+          span{
+            color: $basic-pink;
+          }
+          span:before{
+            content: $price-icon;
+          }
+        }
+
+        &-quantity{
+          span{
+            margin-left: 24px;
+            padding: 0 16px;
+            @include font(18,22,400);
+            outline: 1px solid #EAEAEA;
+          }
+        }
+
+        button {
+          display: inline;
+          position: absolute;
+          background-color: transparent;
+          top:28px;
+          right: 22px;
+
+          svg{
+            fill:#575757;
+          }
+        }
+      }
+    }
+
+    .box__button{
+      display: flex;
+      justify-content: space-between;
+
+      button{
+       min-width: 235px;
+       min-height: 50px;
+       background-color: transparent;
+       text-transform: uppercase;
+       outline:  1px solid #A4A4A4;
+       @include font(14,17,300);
+       color: $basic-black;
+      }
+    }
+
+  }
+
+  .info__box{
+    
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .adress__form{
+      
+      legend{
+        @include font(16,19,300);
+        text-transform: uppercase;
+      }
+
+      input{
+        display: block;
+        width: 360px;
+        min-height: 45px;
+        outline:  1px solid #A4A4A4;
+        margin: 21px 0;
+        padding-left: 16px;
+      }
+
+      input::placeholder{
+        @include font(13,16,300);
+      }
+
+      input:hover,
+      input:active{
+        outline:  1px solid $basic-grey;
+      }
+
+      input:focus::placeholder{
+        color: #B1B1B1; 
+      }
+
+      input:focus{
+        outline:  1px solid $basic-grey;
+      }
+
+      button{
+        background-color: transparent;
+        min-width: 100px;
+        min-height: 34px;
+        @include font(11,13,300);
+        color: #4A4A4A;
+        text-transform: uppercase;
+        outline: 1px solid #A4A4A4;
+      }
+      
+    }
+
+    .presstoorder__box{
+      margin-top: 57px;
+      background-color:#F5F3F3;
+      min-width: 360px;
+      min-height: 214px;
+      padding: 39px 44px 42px 44px;
+
+      hr{
+        border: 1px solid #E2E2E2;
+      }
+      p{
+        text-align: right;
+      }
+      &-sub{
+        @include font(11,13,400);
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        span:before{
+          content: $price-icon;
+          margin-left: 20px;
+        }
+      }
+
+      &-total{
+        @include font(16,19,300);
+        text-transform: uppercase;
+        margin-bottom: 21px;
+        span{
+        color: $basic-pink;  
+        }
+        span:before{
+          content: $price-icon;
+          margin-left: 20px;
+          
+        }
+      }
+
+      button{
+        margin-top: 17px;
+        width: 273px;
+        min-height: 50px;
+        @include font(16,19,300);
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-color: $basic-pink;
+      }
+    }
+  }
+  button:hover{
+    opacity: .8;
+  }
+}

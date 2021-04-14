@@ -1,0 +1,131 @@
+
+.reg{
+  display: flex;
+  padding-top: 64px;
+  
+  .reg__form{
+    
+    legend{
+      @include font(16,19,300);
+    }
+
+    input{
+      width: 360px;
+      min-height: 45px;
+      border: 1px solid #A4A4A4;
+      padding-left: 16px;
+      margin-top: 20px;
+      @include font(13,16,300);
+      transition: .3s ease;
+    }
+
+    input:hover{
+      border: 1px solid #D6D6D6;
+    }
+
+    input:focus{
+      border: 1px solid $basic-grey;
+    }
+
+    input:focus::placeholder{
+      opacity: .3;
+    }
+
+    input::placeholder{
+      color: #B1B1B1;
+      opacity: .8;
+    }
+
+    .radio__input{
+      width: 360px;
+      padding: 34px 0;
+      display: flex;
+      input{
+      display: none;
+      }
+      input:checked+label:before{
+        background-color: $basic-pink;
+      }
+      label{
+      margin-right: 20px;
+      margin-left: 27px;
+      @include font(11,13,300);
+      position: relative;
+      }
+      label:before{
+        content: '';
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        border: 1px solid #A4A4A4;
+        border-radius: 50%;
+        left:-27px;
+        top:-1px;
+      }
+    }
+
+    .reg__form-text{
+      width: 360px;
+      margin-top: 15px;
+      color: #B1B1B1;
+      @include font(13,16,300);
+    }
+
+    button{
+      width: 167px;
+      min-height: 50px;
+      margin:40px 0 96px 0;
+      background-color: $basic-pink;
+      color: $basic-white;
+     
+      @include font(14,17,400);
+      text-transform: uppercase;
+    }
+
+    button:after{
+      content: url(../img/arrow.svg);
+      margin-left: 20px;
+      width: 17px;
+      height: 10px;
+    }
+
+    button:hover,
+    button:focus{
+      background: #E05C6E;
+      transition: background-color .3 ease;
+    }
+    button:active{
+      opacity: 0.9;
+    }
+  }
+
+  .info__box{
+    >*{
+      margin-bottom: 20px;
+    }
+    .info__box-title{
+      @include font(24,29,300);
+      text-transform: uppercase;
+    }
+
+   .info__box-text{
+     @include font(24,29,300);
+    } 
+    .info__box_list{
+      position: relative;
+
+      li{
+      padding:0 0 16px 45px;  
+      @include font(24,29,300);
+      }
+
+      li:before{
+        content: url(../img/check-mark.svg);
+        position: absolute;
+        width: 20px;
+        min-height: 16px;
+        left: 0;
+      }
+    } 
+  }
+}

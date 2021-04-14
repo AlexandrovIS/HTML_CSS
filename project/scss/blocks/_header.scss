@@ -1,0 +1,32 @@
+.header{
+  background-color:$basic-grey;
+  position: relative;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    min-height: 75px;
+   
+    svg{
+    fill:$basic-white;
+    } 
+    svg:hover,
+    svg:focus {
+      opacity: .7;
+    } 
+
+    svg:active{
+      opacity: .5;
+    }
+    input{
+    flex-grow: 1;    
+  }
+
+  }
+
+  &__wrapper :not(:last-child){
+    margin-right:32px;
+    background-color:transparent;
+  }
+}
+

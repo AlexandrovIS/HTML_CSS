@@ -1,0 +1,36 @@
+
+.advantage{
+  background-color: $basic-grey;
+
+  &__list{
+    margin-top: 95px;
+    padding: 104px 0;
+    display: flex;
+    justify-content: space-between;
+    
+    .advantage__item{
+      width: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      svg{
+        fill:$basic-pink;
+        flex-grow: 1;
+      }
+
+      &-title{
+        margin-top: 24px;
+        @include font(20,24,400);
+        color: $other-white;
+      }
+
+      &-text{
+        margin-top: 16px;
+        text-align: center;
+        @include font(14,17,300);
+        color: $other-white;
+      }
+    }
+  }
+}

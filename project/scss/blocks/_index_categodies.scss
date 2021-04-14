@@ -1,0 +1,40 @@
+.categories{
+
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .categories__item{
+      width: 360px;
+      min-height: 260px;
+      border: 1px solid #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-transform: uppercase;
+
+      .categories__text{
+        @include font(16,19,400);
+        color: $basic-white;
+      }
+
+      .categories__heading{
+        @include font(24,29);
+        color: $basic-pink;
+      }
+    }
+
+    .categories__item_1{background: url(../img/categories-img-1.jpeg);}
+    .categories__item_2{background: url(../img/categories-img-2.jpeg);}
+    .categories__item_3{background: url(../img/categories-img-3.jpeg);}
+
+    .categories__item_4{
+      background: url(../img/categories-img-4.jpeg);
+      width: 100%; 
+      margin-top: 30px;
+      min-height: 180px;
+    }
+  }
+}

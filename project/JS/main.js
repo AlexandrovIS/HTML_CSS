@@ -1,21 +1,32 @@
-const menuButton = document.getElementById('header__button')
-const menu = document.querySelector('.header__navigation')
-
+const btnMenu = document.getElementById('header__button')
+const menu = document.querySelector('.navigation')
 const promoBlock = document.querySelector('.promo')
+const closePick = menu.querySelector('svg')
 
+function showMenu(el, callback) {
+  el.addEventListener('click', callback)
+}
 
-const point = document.querySelector('.header__wrapper').getBoundingClientRect().right
-document.querySelector('.header').offsetWidth
-document.querySelector('.header__wrapper').offsetWidth
+function active() {
+  menu.classList.toggle('active__menu')
+  if (promoBlock) {
+    promoBlock.classList.toggle('promo__disactive')
+  } else return
+}
 
-// function openMenu(callback){
-//   menuButton.addEventListener('click', callback)
-// }
+showMenu(closePick, active)
 
+btnMenu.addEventListener('click', e => {
+  e.stopPropagation()
+  active()
+})
 
-menuButton.addEventListener('click', (e) => {
-  menu.classList.toggle('active_menu')
-
-  menu.style.left = point + 'px'
-  promoBlock.classList.toggle('promo_disactive')
+//для скрытия меню при клике вне области меню
+document.addEventListener('click', e => {
+  const its_menu = e.target == menu || menu.contains(e.target);
+  const its_btnMenu = e.target == btnMenu;
+  const menu_is_active = menu.classList.contains('active__menu');
+  if (!its_menu && !its_btnMenu && menu_is_active) {
+    active();
+  }
 })
