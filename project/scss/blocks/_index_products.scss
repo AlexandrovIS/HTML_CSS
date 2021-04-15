@@ -1,0 +1,121 @@
+.products{
+  margin-top: 97px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__heading{
+    @include font(30,36,400);
+    color: $basic-black;
+  }
+
+  &__text{
+    margin: 6px 0 48px 0;
+    @include font(14,17,400);
+    color:$font-color-subt;
+  }
+
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+    
+    .products__item{
+      width: 360px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background: $item-bg-color;
+
+      .product__item-img{
+        position: relative;
+        background:$item-bg-color-hover;
+
+        button{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 138px;
+          min-height: 43px;
+          visibility: visible;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          @include font(14,17,400);
+          background: transparent;
+          color: $basic-white;
+          outline: 1px solid $basic-white;
+          opacity: 0;
+
+            svg{
+              fill:$basic-white;
+              margin-right: 10px;
+           } 
+        }
+
+        *{
+          transition: .3s ease;
+        }
+      }
+
+      .product__item-img:hover,
+      .product__item-img:focus{
+        img{
+          opacity: .2;
+        }
+
+        button{
+          visibility: visible;
+          opacity: 1;
+        } 
+      }
+
+      .product__item-img:active{
+        button{opacity: .9;}
+      }
+
+      .products__item-title{
+        margin: 25px 18px 12px 18px;
+        text-transform: uppercase;
+        @include font(13,16,400);
+      }
+
+      .products__item-description{
+        margin: 0 18px;
+        @include font(14,17,300);
+        flex-grow: 1;
+       }
+
+      .products__item-price{
+        margin: 18px 18px 20px 18px;
+        @include font(16,19,400);
+        color: $basic-pink;
+      }
+
+      .products__item-price::before{
+        content: $price-icon;
+      }
+    }
+  }
+
+  &__button{
+    @include font(16,19,400);
+    color: $product-btn-color;
+    outline: 1px solid $product-btn-color-border;
+    padding: 14px 38px;
+    background: $basic-white;
+    transition:  background-color .3s ease, color 0.5s linear;
+  }
+
+  &__button:hover,
+  &__button:focus{
+    background:$basic-pink;
+    color: $basic-white;
+  }
+
+  &__button:active{
+    opacity: .9;
+  }
+}

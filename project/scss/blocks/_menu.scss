@@ -1,0 +1,64 @@
+.navigation{
+    
+  position: absolute;
+  min-height: 765px;
+  min-width: 232px;
+  background-color: $basic-white;
+  box-shadow: 0 2px 5px 0 $menu-shadow;
+  padding: 37px 73px 0px 34px;
+  top:75px;
+  right: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity .5s ease;
+
+  svg{
+    position: absolute;
+    top:16px;
+    right: 16px;
+    fill:$menu-color-list;
+  }
+
+  svg:hover,
+  svg:focus{
+    fill:$basic-grey;
+  }
+
+  svg:active{
+    fill:$basic-black;
+  }
+
+  .header__title{
+    margin-bottom: 24px;
+    @include font(14,17);
+    text-transform: uppercase;
+  }
+  .header__navigation-list{
+  >li { 
+    margin-bottom: 20px;
+  >a{
+    text-transform: uppercase;
+    color: $basic-pink;
+  } 
+  }
+  >li{
+    ul li{
+      a{
+        display: block;
+        padding: 12px 0 0 20px;
+        @include font((),(),400,);
+        color:$menu-color-list;
+      }
+    }
+  }
+  a{
+    @include font((),(),400,);
+   } 
+  }
+} 
+.active__menu{
+  transition: opacity .5s ease;
+  opacity: 1;
+  z-index: 2;
+}
+
