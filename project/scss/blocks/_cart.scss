@@ -2,37 +2,74 @@
   display: flex;
   margin-top: 96px;
   margin-bottom: 128px;
-
+  @include tablet{
+    margin-top: 59px;
+    flex-direction: column;
+  }
+  @include mobile{
+    margin-top: 39px;
+    margin-bottom: 96px;
+  }
   .goods__box{
     display: flex;
     flex-direction: column;
-    
+    @include tablet{
+      margin-bottom: 64px;
+    }
+    @include mobile{
+      margin: 0 -8px 48px;
+    }
 
     .box__list{
       
       .box__item{
         display: flex;
         position: relative;
-        box-shadow: 10px 10px 8px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: (8px 8px 21px rgba(0, 0, 0, 0.13));
         margin-bottom: 40px;
+        @include mobile{
+          margin-bottom: 32px;
+        }
+        img{
+          @include mobile{
+          width: 40%;
+          height: 100%;
+          }
+        }
       }
+
       .box__item-list{
         min-width: 390px;
         display: flex;
         flex-direction: column;
         padding: 22px 31px;  
+        @include mobile{
+          min-width: 60%;
+          padding: 14px 17px 0 17px; 
+        }
 
         &-title{
           max-width: 262px;
           @include font(24,29,400);
           text-transform:uppercase;
           margin-bottom: 42px;
+
+          @include mobile{
+            @include font(16,19,400);
+            margin-bottom: 26px;
+            max-width: 40%;
+          }
         }
 
         p{
           @include font(22,26,400);
           margin-bottom: 6px;
           color: #575757;
+       
+          @include mobile{
+            @include font(14,16,400);
+            margin-bottom: 4px;
+          }
         }
 
         &-price{
@@ -50,6 +87,10 @@
             padding: 0 16px;
             @include font(18,22,400);
             outline: 1px solid #EAEAEA;
+
+            @include mobile{
+              @include font(10,12,400);
+            }
           }
         }
 
@@ -59,9 +100,16 @@
           background-color: transparent;
           top:28px;
           right: 22px;
-
+          @include mobile{
+            top:14px;
+            right:12px;
+          }
           svg{
             fill:#575757;
+            @include mobile{
+              width: 10px;
+              height: 10px;
+            }
           }
         }
       }
@@ -70,7 +118,15 @@
     .box__button{
       display: flex;
       justify-content: space-between;
-
+      margin-top: 32px;
+      @include tablet{
+        margin-top: 22px;
+        justify-content: center;
+      }
+      @include mobile{
+        justify-self: space-between;
+        margin-top: -2px;
+      }
       button{
        min-width: 235px;
        min-height: 50px;
@@ -79,20 +135,49 @@
        outline:  1px solid #A4A4A4;
        @include font(14,17,300);
        color: $basic-black;
+
+       @include tablet{
+        margin: 0 25px;
       }
+
+      @include mobile{
+       min-width: 49%;
+       min-height: 33px;
+       margin: 0 5px;
+       text-transform: unset;
+       @include font(12,14,400);
+       
+      }
+      }
+
+      
     }
 
   }
 
   .info__box{
-    
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     
+    @include tablet{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include mobile{
+      flex-direction: column;
+    }
     .adress__form{
-      
+      @include tablet{
+        width: 48%;
+      }
+
+      @include mobile{
+        width: 100%;
+      }
+
       legend{
         @include font(16,19,300);
         text-transform: uppercase;
@@ -105,6 +190,9 @@
         outline:  1px solid #A4A4A4;
         margin: 21px 0;
         padding-left: 16px;
+        @include tablet{
+          width: 100%;
+        }
       }
 
       input::placeholder{
@@ -132,6 +220,9 @@
         color: #4A4A4A;
         text-transform: uppercase;
         outline: 1px solid #A4A4A4;
+        @include mobile{
+          text-transform: unset;
+        }
       }
       
     }
@@ -143,8 +234,21 @@
       min-height: 214px;
       padding: 39px 44px 42px 44px;
 
+      @include tablet{
+        min-width: 48%;
+        margin-top: 20px;
+      }
+      @include mobile{
+        width: 100%;
+        margin-top: 48px;
+      }
+      
       hr{
         border: 1px solid #E2E2E2;
+        width: 273px;
+        @include mobile{
+          width: 100%;
+        }
       }
       p{
         text-align: right;
@@ -181,6 +285,7 @@
         text-transform: uppercase;
         color: #FFFFFF;
         background-color: $basic-pink;
+       
       }
     }
   }

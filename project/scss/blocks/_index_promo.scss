@@ -1,24 +1,58 @@
 .promo{
   display: flex;
-  margin-bottom: 63px;
+  margin-bottom: 65px;
   background-color: rgba(58, 56, 56, 0.86);
-
+  @include tablet{
+    margin-bottom: 20px;
+  }
+  @include mobile{
+    margin-bottom: 64px;
+  }
+  img{
+    width: 50%;
+    height: 100%;
+    @include mobile{
+      display: none;
+    }
+  }
   &__heading-wrapper{
     background-color: $bg-pink;
     flex-grow: 1;
     display: flex;
     align-items: center;
     padding: 0 0 0 64px;
-
+    @include tablet{
+      padding: 0 0 0 40px; 
+    }
+    @include mobile{
+      min-height: 363px;
+      justify-content: center;
+    }
     .promo__heading{
       @include font(48,58,900);
       text-transform: uppercase;
       border-left: 12px solid $basic-pink;
       padding-left: 16px;
+      
+      @include tablet{
+        @include font(44,53,900);
+        min-height: auto;
+      }
+      @include mobile{
+        @include font(38,46,900);
+        
+      }
 
     .promo__sub-heading{
       @include font(32,38);
       display: block;
+
+      @include tablet{
+        @include font(24,30)
+      }
+      @include mobile{
+        @include font(20,24)
+      }
       
       .promo__sub-heading-color{
         color: $basic-pink;

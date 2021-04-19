@@ -11,6 +11,12 @@
   .container {
     max-width: $container-width;
     margin: 0 auto;
+    @include tablet{
+      max-width: 96%;
+    };
+    @include mobile{
+      max-width: 91%;
+    };    
   }
   .visually-hidden {
     position: absolute;
@@ -22,3 +28,5 @@
     border: 0;
     clip: rect(0 0 0 0)
   }
+  
+  
