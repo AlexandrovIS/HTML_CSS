@@ -6,6 +6,17 @@
     justify-content: space-between;  
     align-items: center;
     min-height: 75px;
+
+    @include tablet {
+     padding: 0 16px;
+    };
+    @include mobile{
+      padding: 0 0;
+      .header__link{
+        display: none;
+      }
+    }
+    
    
     svg{
     fill:$basic-white;
@@ -22,11 +33,17 @@
     flex-grow: 1;    
   }
 
+  
   }
 
   &__wrapper :not(:last-child){
     margin-right:32px;
     background-color:transparent;
+  }
+  @include mobile{
+    .header__button{
+      margin-right: 0;
+    }
   }
 }
 

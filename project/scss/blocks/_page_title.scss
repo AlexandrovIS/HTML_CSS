@@ -5,6 +5,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include mobile{
+      justify-content: center;
+    }
   }
   .page__title-heading{
     font-size: 24px;

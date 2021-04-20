@@ -3,7 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  @include tablet{
+    margin-top: 154px;
+  }
   &__heading{
     @include font(30,36,400);
     color: $basic-black;
@@ -13,6 +15,12 @@
     margin: 6px 0 48px 0;
     @include font(14,17,400);
     color:$font-color-subt;
+    @include tablet{
+      margin: 3px 0 72px 0; 
+    }
+    @include mobile{
+      margin: 3px 0 64px 0;
+    }
   }
 
   &__list{
@@ -20,18 +28,34 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 48px;
+    @include tablet{
+      margin-bottom: 16px;
+    }
+    @include mobile{
+      margin-bottom: 42px;
+    }
     
     .products__item{
-      width: 360px;
+      width: 31.5%;
       display: flex;
       flex-direction: column;
       position: relative;
       background: $item-bg-color;
-
+      img{
+        width: 100%;
+        height: 100%;
+      }
+      @include tablet{
+        width: 49%;
+        margin-bottom: 17px;
+      }
+      @include mobile{
+        width: 100%;
+      }
       .product__item-img{
         position: relative;
         background:$item-bg-color-hover;
-
+        
         button{
           display: flex;
           justify-content: center;

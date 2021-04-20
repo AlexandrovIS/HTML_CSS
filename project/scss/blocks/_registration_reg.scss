@@ -2,8 +2,24 @@
 .reg{
   display: flex;
   padding-top: 64px;
-  
+
+  @include tablet{
+    padding-top: 40px;
+  }
+
+  @include mobile{
+    flex-direction: column;
+  }
+
   .reg__form{
+    width: 31.5%;
+    @include tablet{
+      width: 50%;
+    }
+
+    @include mobile{
+      width: 100%;
+    }
     
     legend{
       @include font(16,19,300);
@@ -11,13 +27,19 @@
 
     input{
       width: 360px;
+      display: block;
       min-height: 45px;
       border: 1px solid #A4A4A4;
       padding-left: 16px;
       margin-top: 20px;
       @include font(13,16,300);
       transition: .3s ease;
+      @include mobile{
+      width: 100%;
     }
+    }
+
+    
 
     input:hover{
       border: 1px solid #D6D6D6;
@@ -40,6 +62,7 @@
       width: 360px;
       padding: 34px 0;
       display: flex;
+      
       input{
       display: none;
       }
@@ -62,6 +85,13 @@
         left:-27px;
         top:-1px;
       }
+      .input_other-label{
+        display: none;
+       @include tablet{
+        display: block;
+      } 
+      }
+      
     }
 
     .reg__form-text{
@@ -80,6 +110,10 @@
      
       @include font(14,17,400);
       text-transform: uppercase;
+
+      @include mobile{
+        margin-bottom: 40px;
+      }
     }
 
     button:after{
@@ -100,23 +134,47 @@
   }
 
   .info__box{
+    width: 68.5%;
+    padding-left: 128px;
+    @include tablet{
+      padding-left: 22px;
+      width: 50%;
+    }
+    @include mobile{
+      width: 100%;
+      padding: 0;
+    }
     >*{
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
     .info__box-title{
       @include font(24,29,300);
       text-transform: uppercase;
+      @include tablet{
+        @include font(16,19,300);
+        margin-bottom: 32px;
+      }
     }
 
    .info__box-text{
      @include font(24,29,300);
+
+     @include tablet{
+        @include font(16,19,300)
+    }
     } 
+
     .info__box_list{
       position: relative;
-
+      @include mobile{
+        margin-bottom: 78px;
+      }
       li{
       padding:0 0 16px 45px;  
       @include font(24,29,300);
+      @include tablet{
+        @include font(16,19,300);
+      }
       }
 
       li:before{
