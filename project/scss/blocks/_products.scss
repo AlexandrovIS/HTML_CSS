@@ -1,4 +1,4 @@
-.products_page{
+.products-page{
 
   .path{
     z-index: 2;
@@ -23,7 +23,7 @@
   .relative{
   position: relative;
   background: #F7F7F7;
-    .slider__box{
+    .slider-box{
       padding: 11px 0 42px;
       margin: 0 auto;
       max-width: 597px;
@@ -63,7 +63,8 @@
     }
   }
 
-  .product__info{
+  .desc-product{
+    
     position: relative;
     max-width: $container-width;
     margin: 0 auto;
@@ -146,7 +147,7 @@
       }
     }
 
-    &--select-button{
+    &-select-button{
       display: flex;
       justify-content: center;
       gap: 22px;
@@ -156,7 +157,7 @@
         text-transform: uppercase;  
         color: #6F6E6E;
         background-color: transparent;
-        .down__arrow{
+        .down-arrow{
           margin-left: 9px;
           fill:#6F6E6E
         }

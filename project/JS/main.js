@@ -9,6 +9,10 @@ function showMenu(el, callback) {
 
 function active() {
   menu.classList.toggle('active__menu')
+  if (document.body.getBoundingClientRect().width < 768) {
+    document.body.classList.toggle('overflow-hidden')
+  }
+
   if (promoBlock) {
     promoBlock.classList.toggle('promo__disactive')
   } else return
@@ -30,3 +34,15 @@ document.addEventListener('click', e => {
     active();
   }
 })
+
+window.addEventListener('resize', () => {
+
+
+  menu.classList.remove('active__menu')
+  if (promoBlock) {
+    promoBlock.classList.remove('promo__disactive')
+  } else return
+
+
+})
+

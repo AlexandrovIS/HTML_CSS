@@ -1,4 +1,4 @@
-.cart__wrapper{
+.cart-wrapper{
   display: flex;
   margin-top: 96px;
   margin-bottom: 128px;
@@ -10,7 +10,7 @@
     margin-top: 39px;
     margin-bottom: 96px;
   }
-  .goods__box{
+  .goods-box{
     display: flex;
     flex-direction: column;
     @include tablet{
@@ -155,7 +155,7 @@
 
   }
 
-  .info__box{
+  .info-box{
     flex-grow: 1;
     display: flex;
     flex-direction: column;

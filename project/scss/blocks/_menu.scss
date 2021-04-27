@@ -1,27 +1,38 @@
 .navigation{
     
-  position: absolute;
+  position: fixed;
   min-height: 765px;
-  min-width: 232px;
   background-color: $basic-white;
   box-shadow: 0 2px 5px 0 $menu-shadow;
   padding: 37px 73px 0px 34px;
   top:75px;
   right: 0;
+  transform: translateX(100%);
   z-index: 2;
-  opacity: 0;
-  transition: opacity .5s ease;
+  transition: transform 700ms ease;
+  *{
+    opacity: 0;
+    transition:opacity 500ms linear;
+  }
 
     @include mobile{
       display: flex;
       flex-direction: column;
       align-items: center;
-      
       min-width: 100%;
-      min-height: auto;
-      transform: translateY(-50%);
-      visibility: hidden;
-      transition: all 1s ease;
+      height: 100vh;
+      padding: 30px 0;
+
+      position: absolute;
+      top:75px;
+      transform: translateY(-100%);
+      opacity: 1;
+      transition: transform 700ms ease;
+     
+      *{
+         opacity: 0;
+         transition: opacity 500ms linear;
+        }
     }
 
   svg{
@@ -40,59 +51,66 @@
     fill:$basic-black;
   }
 
-  .header__title{
+  &__title{
     margin-bottom: 24px;
     @include font(14,17);
     text-transform: uppercase;
   }
-  .header__navigation-list{
+
+  &__list{
+    @include mobile{
+      padding: 0;
+    }
   >li { 
     margin-bottom: 20px;
+    @include mobile{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   >a{
     text-transform: uppercase;
     color: $basic-pink;
   } 
   }
-  >li{
+  >li{ 
+    
     ul li{
+      @include mobile{
+       width: 360px;
+      text-align: center; 
+      }
+      
       a{
         display: block;
         padding: 12px 0 0 20px;
         @include font((),(),400,);
         color:$menu-color-list;
+        @include mobile{
+          padding: 12px 0 0 0;
+        }
       }
     }
   }
-  a{
-    @include font((),(),400,);
-   } 
   }
 } 
+
 .active__menu{
-  transition: opacity .5s ease;
-  opacity: 1;
+  position: absolute;
+  transform: translateX(0%);
   z-index: 3;
+  
+    *{
+      opacity: 1;
+    }
 
     @include mobile{
-      position: absolute;
-      visibility: visible;
+      opacity: 1;
       transform: translateY(0%);
-      transition: transform .5s ease,;
+
+      *{
+        opacity: 1;
+        transition: opacity 0ms linear;
+      }
     }
 }
-// @include mobile{
-//   .active__menu{
-//   animation: active__menu 0.4s linear 1 .2s both;
-//   min-height:  auto;
-// }
-// }
-
-
-// @keyframes active__menu {
-//   from {
-//     transform: translateY(-100%)
-//   }
-//   to {
-//     transform: translateY(0)
-//   }
-// }

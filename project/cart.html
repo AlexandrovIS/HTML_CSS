@@ -63,12 +63,12 @@
         d="M7.4158 6.00409L11.7158 1.71409C11.9041 1.52579 12.0099 1.27039 12.0099 1.00409C12.0099 0.73779 11.9041 0.482395 11.7158 0.294092C11.5275 0.105788 11.2721 0 11.0058 0C10.7395 0 10.4841 0.105788 10.2958 0.294092L6.0058 4.59409L1.7158 0.294092C1.52749 0.105788 1.2721 -1.9841e-09 1.0058 0C0.739497 1.9841e-09 0.484102 0.105788 0.295798 0.294092C0.107495 0.482395 0.0017066 0.73779 0.0017066 1.00409C0.0017066 1.27039 0.107495 1.52579 0.295798 1.71409L4.5958 6.00409L0.295798 10.2941C0.20207 10.3871 0.127676 10.4977 0.0769072 10.6195C0.0261385 10.7414 0 10.8721 0 11.0041C0 11.1361 0.0261385 11.2668 0.0769072 11.3887C0.127676 11.5105 0.20207 11.6211 0.295798 11.7141C0.388761 11.8078 0.499362 11.8822 0.621222 11.933C0.743081 11.9838 0.873786 12.0099 1.0058 12.0099C1.13781 12.0099 1.26852 11.9838 1.39038 11.933C1.51223 11.8822 1.62284 11.8078 1.7158 11.7141L6.0058 7.41409L10.2958 11.7141C10.3888 11.8078 10.4994 11.8822 10.6212 11.933C10.7431 11.9838 10.8738 12.0099 11.0058 12.0099C11.1378 12.0099 11.2685 11.9838 11.3904 11.933C11.5122 11.8822 11.6228 11.8078 11.7158 11.7141C11.8095 11.6211 11.8839 11.5105 11.9347 11.3887C11.9855 11.2668 12.0116 11.1361 12.0116 11.0041C12.0116 10.8721 11.9855 10.7414 11.9347 10.6195C11.8839 10.4977 11.8095 10.3871 11.7158 10.2941L7.4158 6.00409Z" />
     </svg>
 
-    <h2 class="header__title">menu</h2>
-    <ul class="header__navigation-list">
+    <h2 class="navigation__title">menu</h2>
+    <ul class="navigation__list">
       <li><a href="#">man</a>
         <ul>
           <li><a href="#">Accessories</a></li>
-          <li><a href="#">Bags</a></li>
+          <li><a href="#">Bags </a></li>
           <li><a href="#">Denim</a></li>
           <li><a href="#">T-Shirts</a></li>
         </ul>
@@ -96,15 +96,16 @@
   </nav>
 
   <main>
-    <section class="page__title">
-      <div class="title__wrap container">
-        <h1 class="page__title-heading">shopping cart</h1>
+    <section class="pagetitle">
+      <div class="pagetitle-wrap container">
+        <h1 class="pagetitle-heading">shopping cart</h1>
       </div>
     </section>
 
-    <section class="cart__wrapper container">
+    <section class="cart-wrapper container">
       <h2 class="visually-hidden">goods for order</h2>
-      <section class="goods__box">
+
+      <section class="goods-box">
         <h2 class="visually-hidden">your order</h2>
         <ul class="box__list">
           <li class="box__item">
@@ -146,7 +147,7 @@
         </div>
       </section>
 
-      <section class="info__box">
+      <section class="info-box">
         <h2 class="visually-hidden">info about order</h2>
         <form action="#" class="adress__form">
           <fieldset>
@@ -165,41 +166,37 @@
           <button type="button">proceed to checkout</button>
         </div>
       </section>
-    </section>
 
     </section>
+
+
   </main>
 
   <footer class="footer">
 
     <section class="footer__top">
-
       <h2 class="visually-hidden">subscribe</h2>
-
       <ul class="footer__top__list container">
-        <li class="footer__top__item top__item-left">
+        <li class="footer__top__item item-infobox">
           <img src="./img/logo-bottom.jpeg" alt="foto" width="96" height="96">
           <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi,<span> a pulvinar purus condimentum“</span> </p>
         </li>
-        <li class="footer__top__item top__item-right">
-          <h3 class="item__right-title">subscribe</h3>
-          <p class="item__right-text"> for our newletter and promotion</p>
-          <form action="#" class="item__right-form">
+        <li class="footer__top__item item-subscribe">
+          <h3 class="item-subscribe-title">subscribe</h3>
+          <p class="item-subscribe-text"> for our newletter and promotion</p>
+          <form action="#" class="item-subscribe-form">
             <input type="email" placeholder="Enter Your Email">
-            <button type="submit" class="top-item_right-button">Subscribe
-            </button>
+            <button type="submit">Subscribe</button>
           </form>
-
         </li>
       </ul>
-
     </section>
-    <section class="footer__bottom">
 
-      <div class="footer__bottom_contain container">
-        <h2 class="footer__bottom_title">© 2021 Brand All Rights Reserved.</h2>
-        <ul class="footer__bottom_list">
-          <li>
+    <section class="footer__bottom">
+      <div class="footer__bottom-contain container">
+        <h2 class="footer__bottom-title">© 2021 Brand All Rights Reserved.</h2>
+        <ul class="footer__bottom-list">
+          <li class="footer__bottom-item">
             <a href="#">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M31.4506 0H0V32H31.4506V0Z" fill="white" />
@@ -209,7 +206,7 @@
               </svg>
             </a>
           </li>
-          <li class="bottom_list-insta">
+          <li class="footer__bottom-item">
             <a href="#">
               <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M32.1889 0H0.738281V32H32.1889V0Z" fill="#F16D7F" />
@@ -226,7 +223,7 @@
               </svg>
             </a>
           </li>
-          <li>
+          <li class="footer__bottom-item">
             <a href="#">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M31.9252 0H0.474609V32H31.9252V0Z" fill="white" />
@@ -243,7 +240,7 @@
               </svg>
             </a>
           </li>
-          <li>
+          <li class="footer__bottom-item">
             <a href="#">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M31.6635 0H0.212891V32H31.6635V0Z" fill="white" />
@@ -262,8 +259,8 @@
           </li>
         </ul>
       </div>
-
     </section>
+
   </footer>
 
   <script src="./JS/main.js"></script>
