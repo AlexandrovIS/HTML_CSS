@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
   <header class="header">
     <div class="container header__wrapper">
       <a href="./index.html">
@@ -94,9 +93,7 @@
       </li>
     </ul>
   </nav>
-
   <main>
-
     <section class="pagetitle">
       <div class="pagetitle-wrap container">
         <h1 class="pagetitle-heading">
@@ -104,18 +101,16 @@
         </h1>
       </div>
     </section>
-
     <section class="reg container">
-
       <form action="#" class="reg__form" method="">
 
-        <fieldset>
+        <fieldset class="reg__form-name">
           <legend>Your Name</legend>
           <input type="text" placeholder="First Name">
           <input type="text" placeholder="Last Name">
         </fieldset>
 
-        <fieldset class="radio__input">
+        <fieldset class="reg__form-sex">
           <input type="radio" id="input_male" name="check_sex" value="male">
           <label for="input_male">Male</label>
 
@@ -123,10 +118,10 @@
           <label for="input_female">Female</label>
 
           <input type="radio" id="input_other" name="check_sex" value="other">
-          <label class="input_other-label" for="input_other">Other</label>
+          <label class="sex-other" for="input_other">Other</label>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="reg__form-login">
           <legend>Login details</legend>
           <input type="email" placeholder="Email">
           <input type="password" placeholder="Password">
@@ -138,12 +133,11 @@
 
         <button type="submit">join now</button>
       </form>
-
-      <div class="info__box">
-        <h2 class="info__box-title">loyalty has its perks</h2>
-        <p class="info__box-text">Get in on the loyalty program where you can earn points and unlock serious perks.
+      <div class="reg__info">
+        <h2 class="reg__info-title">loyalty has its perks</h2>
+        <p class="reg__info-text">Get in on the loyalty program where you can earn points and unlock serious perks.
           Starting with these as soon as you join:</p>
-        <ul class="info__box_list">
+        <ul class="reg__info-list">
           <li>15% off welcome offer</li>
           <li>Free shipping, returns and exchanges on all orders</li>
           <li>$10 off a purchase on your birthday</li>
@@ -151,16 +145,8 @@
           <li>Exclusive offers & rewards</li>
         </ul>
       </div>
-
     </section>
-
-
-
-
-
-
   </main>
-
   <footer class="footer">
 
     <section class="footer__top">
@@ -251,7 +237,6 @@
     </section>
 
   </footer>
-
   <script src="./JS/main.js"></script>
 </body>
 
