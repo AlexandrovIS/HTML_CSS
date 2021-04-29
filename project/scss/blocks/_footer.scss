@@ -1,6 +1,7 @@
 footer{
   .footer__top{
     background-image: url(../img/footer-top-img.jpeg);
+    background-color: #F2F2F2;
     background-position: center;
     background-size: cover;
     @include tablet{
@@ -26,7 +27,7 @@ footer{
       justify-content: center;
       align-items: center;
     }
-    .top__item-left{
+    .item-infobox{
       width: 360px;
       display: flex;
       flex-direction: column;
@@ -46,34 +47,42 @@ footer{
       text-align: center;
       @include font(20,24,400);
       color: $basic-grey;
+
       span{
       @include font((),(),400,italic);      
       }   
+
       @include mobile{
         @include font(18,22,400)
       }      
       }
     }
-    .top__item-right{
+    .item-subscribe{
       width: 49%;
+
       @include tablet{
         width: 100%;
       }
-      .item__right-title{
-         text-transform: uppercase;
+
+      &-title{
+        text-transform: uppercase;
          @include font(24,38);   
+
          @include mobile{
            @include font(24,36)
          }      
-       }
-       .item__right-text{
+      }
+
+      &-text{
          @include font(18,40,400);
          text-transform: uppercase;
+
          @include mobile{
           @include font(14,21,400)
         }  
-        }
-        .item__right-form{
+      }
+
+      &-form{
           display: flex;
           min-width: 360px;
           min-height: 50px;
@@ -105,36 +114,40 @@ footer{
           button:active{
             opacity: 0.9;
           }
-        }
+      }
       }
   }
   .footer__bottom{
     background-color: $basic-grey;
     
-    .footer__bottom_contain {
+    &-contain {
       min-height: 80px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      
       @include mobile{
         min-height: 143px;
         flex-direction: column-reverse;
         padding: 43px 0 8px;
       }
-      .footer__bottom_title{
+
+      .footer__bottom-title{
         @include font(16,19,400);
         color:$other-white;
       }
-      .footer__bottom_list{
-      display: flex;
-      gap: $foot-icon-gap;      
-      svg:hover,
-      svg:focus {
-      opacity: .7;
-      } 
-      svg:active{
-      opacity: .5;
-      }
+
+      .footer__bottom-list{
+        display: flex;
+        gap: $foot-icon-gap;  
+            
+        svg:hover,
+        svg:focus {
+        opacity: .7;
+        } 
+        svg:active{
+        opacity: .5;
+        }
       }
     }
   }

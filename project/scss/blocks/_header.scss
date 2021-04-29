@@ -1,12 +1,13 @@
 .header{
   background-color:$basic-grey;
   position: relative;
+  z-index: 99;
   &__wrapper{
     display: flex;
     justify-content: space-between;  
     align-items: center;
     min-height: 75px;
-
+    
     @include tablet {
      padding: 0 16px;
     };

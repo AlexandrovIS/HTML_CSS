@@ -1,6 +1,6 @@
-.page__title{
+.pagetitle{
   background-color: $bg_color;
-  .title__wrap{
+  &-wrap{
     min-height: 148px;
     display: flex;
     justify-content: space-between;
@@ -10,7 +10,7 @@
       justify-content: center;
     }
   }
-  .page__title-heading{
+  &-heading{
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
