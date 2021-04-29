@@ -11,9 +11,19 @@
   z-index: 2;
   opacity: 0;
   transition: opacity .5s ease;
-  @include mobile{
-    min-width: 100%;
-  }
+
+    @include mobile{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      min-width: 100%;
+      min-height: auto;
+      transform: translateY(-50%);
+      visibility: hidden;
+      transition: all 1s ease;
+    }
+
   svg{
     position: absolute;
     top:16px;
@@ -61,11 +71,28 @@
 .active__menu{
   transition: opacity .5s ease;
   opacity: 1;
-  z-index: 2;
-  @include mobile{
-    display: block;
-    position: relative;
-    top: 0;
-  }
-}
+  z-index: 3;
 
+    @include mobile{
+      position: absolute;
+      visibility: visible;
+      transform: translateY(0%);
+      transition: transform .5s ease,;
+    }
+}
+// @include mobile{
+//   .active__menu{
+//   animation: active__menu 0.4s linear 1 .2s both;
+//   min-height:  auto;
+// }
+// }
+
+
+// @keyframes active__menu {
+//   from {
+//     transform: translateY(-100%)
+//   }
+//   to {
+//     transform: translateY(0)
+//   }
+// }

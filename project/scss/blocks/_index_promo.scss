@@ -72,5 +72,11 @@
     transition: .5s linear;
     opacity: .2;
     z-index: 1;
+    
+    @include mobile{
+      opacity: 1;
+      transition: 0s;
+    }
+  
   }
 }

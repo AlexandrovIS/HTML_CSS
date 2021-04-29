@@ -4,9 +4,18 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
-    .categories__item{
+    a{
       width: 31.5%;
+    @include mobile{
+      width: 100%;
+    }
+    }
+
+    a:last-child{
+      width: 100%;
+    }
+    .categories__item{
+      width: 100%;
       min-height: 260px;
       display: flex;
       align-items: center;
