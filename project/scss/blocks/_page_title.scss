@@ -18,4 +18,23 @@
     text-transform: uppercase;
     color: $basic-pink;
   }
+  .path{
+    z-index: 2;
+    @include font(14,17,300);
+    text-transform: uppercase;
+    a{
+      color: #636363;
+    }
+    a:after{
+      content: '/';
+    }
+    p{
+      @include font((),(),400);
+      display: inline;
+      color: #F16D7F;
+    }
+    @include mobile{
+      margin-top: 32px;
+    }
+  }
 }
