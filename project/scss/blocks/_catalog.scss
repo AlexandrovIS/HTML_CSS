@@ -1,0 +1,327 @@
+.catalog{
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    gap: 30px;
+    justify-content: center;
+
+    @include tablet{
+      grid-template-columns: repeat(2,360px);
+      gap:16px;
+    }
+    @include mobile{
+      grid-template-columns: 360px;
+    }
+  }
+
+  &__item{
+    background-color: #F8F8F8;
+    
+    .item__list{
+      padding: 24px 18px 20px 18px;
+      
+      .title{
+        @include font(13,16,400);
+        text-transform: uppercase;
+      }
+
+      .desc{
+        @include font(14,17,300);
+        color: #5D5D5D;
+        margin: 12px 0 18px;
+      }
+
+      .price{
+        @include font(16,19,400);
+        color: $basic-pink;
+      }
+
+      .price::before{
+        content:$price-icon ;
+      }
+    }
+  }
+}
+.pagination {
+  &__list{
+    display: flex;
+    max-width: 282px;
+    min-height: 43px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 48px auto 96px;
+    outline: 1px solid #EBEBEB;
+
+    @include tablet{
+      margin: 40px auto 64px;
+    }
+  }
+
+  &__item{
+    @include font(16,19,300);
+    color: #B7B7B7;
+  
+    &-btn{
+      background-color: transparent;
+      position: relative;
+      svg{
+        fill:$basic-black;
+        position: absolute;
+        transform: translate(-50%,-90%);
+      }
+    }
+
+    &-btn:hover,
+    &-btn:focus{
+      opacity: .7;
+    }
+
+    &-btn:active{
+      opacity: .9;
+    }
+
+    input{
+      display: none;
+    }
+
+    input:checked+label{
+      color: #EF5B70;
+    }
+
+    label:hover,
+    label:focus{
+      color:$basic-black;
+    }
+  }
+}
+
+.option__list{
+  margin: 51px 0 64px;
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  gap: 30px;
+  
+  @include tablet{
+    margin: 24px 0 40px;
+    grid-template-columns: repeat(2, 360px);
+    justify-content: space-between;
+    gap: 0;
+  }
+  @include mobile{
+    grid-template-columns: 37px auto;
+    margin: 24px 0 32px;
+  }
+
+  &-filter{
+    input{
+      display: none;
+    }
+
+    .input-btn:checked +.label-btn .sections__list{
+      visibility: visible;
+      transform: translateY(-30px);
+      transition: visibility 700ms linear,transform 500ms linear;        opacity: 1;
+    }
+    
+    .label-btn {
+      background-color: transparent;
+      @include font(14,17,600);
+      text-transform: uppercase;
+     
+      .hidden{
+        @include mobile{
+          display: none;
+        }
+        
+      }
+      
+      svg{
+        margin-left: 11px;
+        fill:$basic-black;
+        @include mobile{
+          width: 37px;
+          height: 25px;
+        }
+      }
+
+      .sections__list{
+        visibility: hidden; 
+        position: absolute;
+        transform: translateY(-100%);
+        opacity: .5;
+        width: 360px;
+        padding: 13px 16px 0 16px;
+        background: #FFFFFF;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        transition: visibility 300ms linear,transform 500ms linear, opacity 200ms linear; 
+
+        @include mobile{
+          z-index: 2;
+          width: 100%;
+          left: 0;
+        }
+      }
+
+      .sections__item:not(:first-child){
+          display: flex;
+          flex-direction: column;
+
+          .item-label{
+            min-height: 37px;
+            border-left: 5px solid #EF5B70;
+            border-bottom: 1px solid #EBEBEB;
+            @include font(14,17,400);
+            color:  #6F6E6E;
+            text-transform: uppercase;
+            padding-left: 11px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+
+          .sub-list{
+            display: none;
+            padding: 24px 11px;
+             
+            li{
+              a{
+              @include font(14,17,400);
+              color: #6F6E6E;
+              text-transform: none;
+              }
+              a:visited{
+                color: #6F6E6E;
+              }
+             }
+
+             li:not(:last-child){
+               margin-bottom: 11px;
+             }
+          }
+
+          input:checked +label{
+            color: #EF5B70;
+          }
+
+          input:checked ~.sub-list{
+           display: block;
+          }
+      }
+
+      .sections__item{
+        margin-bottom: 16px;
+      }
+
+      .sections__item:first-child{
+        @include font(14,16,600);
+          color: #EF5B70;
+        svg{
+          fill: #EF5B70;;
+        }
+      }
+    }
+  }
+
+  &-checkboxs{
+
+      
+    .checkboxs__list{
+      display: flex;
+      gap: 30px;
+
+     @include tablet{
+      justify-content: flex-end;  
+    }
+
+    @include mobile{
+      gap: 24px;
+    }
+    }
+    
+    .checkboxs__item {
+      @include font(14,17,400);
+      color: #6F6E6E;
+      text-transform: uppercase;
+
+      @include mobile{
+        @include font(12,14,400);
+      }
+
+      label{
+        position: relative;
+        cursor: pointer;
+
+        svg{
+          vertical-align: 25%;
+          margin-left: 10px;
+          transform: translateY(50%);
+          fill:#6F6E6E;
+          @include mobile{
+            margin-left: 9px;
+          }
+        }
+
+        ul{
+          visibility: hidden;
+          transform: translateY(-100%);
+          position: absolute;
+          z-index: 1;
+          min-width: 80px;
+          top: 20px;
+          left: -20px;
+          text-transform: uppercase;
+          background: #FFFFFF;
+          box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+          padding: 9px;
+          opacity: 0;
+          transition:  visibility 1s ease, transform 1000ms linear, opacity 300ms linear;
+          *{
+            opacity: 0;
+            transition: opacity 300ms linear;
+          }
+          
+          @include mobile{
+            left: auto;
+            right: 0;
+          }
+        }
+      }
+
+      input{
+        display: none;
+      }
+
+      input:checked + label ul{
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        transition:transform 300ms linear, opacity 700ms linear;
+        *{
+          opacity: 1;
+          transition: opacity 1000ms linear;
+        }
+      }
+      
+    } 
+    
+    .trending-list,.size-list{
+      .check-list{
+        li{
+          margin-bottom:6px ;
+        }
+        label:before{
+          content: '';
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          outline: 1px solid #EBEBEB;
+          margin-right: 9px;
+        }
+        input:checked+label:before{
+          background-color: $basic-pink;
+        }
+      }
+    }
+    
+  }
+}
